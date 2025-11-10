@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block titulo %}COLORMANIA - Sistema administrativo{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+    <body>
+        <div>
+            <div class="backhead">
+                <header class="header" href="index.html">
+                    <img href="index.html" src="img/logo.png">
+                    <a href="index.html">COLORMANIA</a>
+                </header>
+            </div>
+            <nav class="nav_h">
+                <ul>
+                    <li><a href="#" id="menuBtn">COLORES ▼</a></li>
+                    <li><a href="pinturas.html">PINTURAS</a></li>
+                    <li><a href="productos.html">PRODUCTOS</a></li>
+                    <li><a href="selladores.html">selladores</a></li>
+                    <li><a href="inspiracion.html">INSPIRACIÓN</a></li>
+
+                </ul>
+            </nav>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><div class="figura" style="background-color: #d37b2e"><a href="colores/calidos.html">CALIDOS</a></li>
+                    <li><div class="figura" style="background-color: #85c1e3"><a href="colores/frios.html">FRIOS</a></li>
+                    <li><div class="figura" style="background-color: #848484"><a href="colores/grises.html">GRISES</a></li>
+                    <li><div class="figura" style="background-color: #ddaec3"><a href="colores/pasteles.html">PASTELES</a></li>
+                    <li><div class="figura" style="background-color: #49d32e"><a href="colores/vivos.html">VIVOS</a></li>
+                </ul>
+            </nav>
+
+            <main class="main-content">
+                {% block contenido %}{% endblock %}
+            </main>
+
+            <footer class="main-footer">
+                <p>© 2024 Similares - Sistema de Gestión de Inventarios</p>
+            </footer>
+        </div>
+    </body>
+</html>
